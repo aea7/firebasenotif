@@ -28,7 +28,6 @@ export default class Aboutscreen extends Component {
     const {navigation} = this.props;
     let topic = navigation.getParam('topic');
     let title = navigation.getParam('name');
-    debugger;
     fetch('https://fcm.googleapis.com/fcm/send', {
       method: 'POST',
       headers: {
@@ -137,7 +136,7 @@ export default class Aboutscreen extends Component {
             this.sendToFCM(inputText);
           }}
           closeDialog={() => {
-            this.showDialog(false);
+            this.closeDialog();
           }}
         />
       </View>
