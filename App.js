@@ -43,8 +43,6 @@ export default class App extends React.Component {
     this.notificationDisplayedListener = firebase
       .notifications()
       .onNotificationDisplayed((notification: Notification) => {
-        // Process your notification as required
-        // ANDROID: Remote notifications do not contain the channel ID. You will have to specify this manually if you'd like to re-display the notification.
       });
 
     this.notificationListener = firebase
